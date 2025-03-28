@@ -1,5 +1,5 @@
 public class Doctor {
-    int id; // Autoincrement
+    static int id = 0; // Autoincrement
     String name;
     String speciality;
 
@@ -9,6 +9,7 @@ public class Doctor {
     // It can have parameters
     // It can be overloaded, that is, it can have multiple versions of the same method with different parameters
     Doctor() {
+        id++;
         System.out.println("Constructor method");
     }
 
@@ -19,6 +20,10 @@ public class Doctor {
     // Methods
     public void showName() {
         System.out.println(name);
+    }
+
+    public void showId() {
+        System.out.println("ID: " + id);
     }
 
 }
